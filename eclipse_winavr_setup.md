@@ -74,7 +74,7 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.12. Under `Libraries (-l)` add a library and type: `kilolib`. The linker will automatically look for a file called `libkilolib.a`, which is why we renamed this file.
 
-### Fixing a Bug
+### Fixing a Silly Bug
 
 > One last step. If you try building now and your coded uses any functions from the math library (math.h), you’ll get an error. This is due to a [bug](http://forum.arduino.cc/index.php?topic=40215.0) - apparently Eclipse attempts to use the C++ library instead of the C one, and this causes a problem.
 
