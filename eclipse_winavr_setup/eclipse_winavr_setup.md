@@ -68,9 +68,9 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 > You’ll now tell Eclipse where to look for the header and library files you just copied.
 
-4.10. Right click on the project name and click `Properties`.  Go to `C/C++ Build -> Settings`. Under `Tool Settings` go to `AVR Compiler -> Directories`. Under `Include Paths (-I)` add a new path. Click `Workspace` and navigate to the `include` directory in your project.
+4.10. Right click on the project name and click `Properties`.  Go to `C/C++ Build -> Settings`. Under `Tool Settings` go to `AVR Compiler -> Directories`. Under `Include Paths (-I)` add a new path. Click `Workspace` and navigate to the `include` directory in your project. Click `OK`.
 
-4.11. Go to `AVR C Linker -> Libraries`. Under `Libraries Path (-L)` add a new path. Click `Workspace` and navigate to the `lib` directory in your project.
+4.11. Still under `C/C++ Build -> Settings`, go to `AVR C Linker -> Libraries`. Under `Libraries Path (-L)` add a new path. Click `Workspace` and navigate to the `lib` directory in your project. Click `OK`.
 
 4.12. Under `Libraries (-l)` add a library and type: `kilolib`. The linker will automatically look for a file called `libkilolib.a`, which is why we renamed this file.
 
