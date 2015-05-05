@@ -14,9 +14,9 @@ Installing the WinAVR Toolchain
 Compiling Kilolib
 -----------------
 
-1. Download and extract Kilolib from Alex Cornejo’s Github repo: https://github.com/acornejo/kilolib (also available as a zipped folder in the same directory as this document).
+1. [Download](https://github.com/acornejo/kilolib) Kilolib and extract the folder.
 
-We now need to build Kilolib. It’s easiest to do this from Programmer’s Notepad IDE. We don’t need to create a project; we just need to point it to the Kilolib root directory, and it will execute the Makefile supplied with the library using the WinAVR toolchain.
+You now need to build Kilolib, and it’s easiest to do this using the Programmer’s Notepad IDE. There's no need to create a project; you just need to point the IDE to the Kilolib root directory, and it will execute the Makefile found there.
 
 2. Open Programmer’s Notepad, File -> Open, navigate to the Kilolib directory and open the file “blank.c”. Click on Tools > Make All.
 
