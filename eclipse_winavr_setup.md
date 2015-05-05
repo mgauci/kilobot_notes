@@ -77,24 +77,17 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 ### Fixing a Bug
 
-One last step: If you try compiling now and you use any functions from the math library (math.h), you’ll get an error. This is due to a bug - apparently Eclipse attempts to use the C++ instead of the C library. This is described here: http://forum.arduino.cc/index.php?topic=40215.0
+> One last step. If you try building now and your coded uses any functions from the math library (math.h), you’ll get an error. This is due to a [bug](http://forum.arduino.cc/index.php?topic=40215.0) - apparently Eclipse attempts to use the C++ library instead of the C one, and this causes a problem.
 
-10. The first solution posted there works. It’s copied here for convenience:
-
-Try modifying the linker "Command line pattern" in (C/C++ Build -> Settings -> AVR C++ Linker) to look like this:
-
-${COMMAND}  -lc -lm ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT}  ${INPUTS}  -lc
-
-This should convince the linker to get math functions from libc and not libgcc. Apparently there is some bad code in the libgcc math functions that assumes all inter-library jumps are reachable with an RJMP when in fact the linker can put functions anywhere in .text that it feels fit.
-
-The above workaround works for me.
+4.13. Go to `AVR C Linker` (this is one level above where you already are). Modify the `Command Line Pattern` to:
+`${COMMAND}  -lc -lm ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT}  ${INPUTS}  -lc`.
 
 5. Building Your Code and Uploading it to a Kilobot Robot
 ---------------------------------------------------------
 
-11. Close the settings. You’re now good to go. Build the project by pressing Ctrl++B (or going to Project -> Build All). A subdirectory “Release” will be created in your project, and the object file will be found here (“Kilobot.hex” if you named your project “Kilobot”).
+5.1. Close the settings - you’re now good to go. Build the project by pressing `Ctrl+B` (or going to `Project -> Build All`). A `Release` directory will be created in your project, and this will contain the object code file (aka "hex file"), `Kilobot.hex`.
 
-12. You can now upload this hex file to your Kilobot robot using the KiloGUI app.
+5.2. You can now upload the hex file onto your Kilobot robot using the [KiloGUI tool](https://github.com/acornejo/kilogui).
 
 6. Closing Notes
 ----------------
