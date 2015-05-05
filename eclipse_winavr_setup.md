@@ -40,7 +40,7 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
  
 4. Setting Up an Eclipse Project
 --------------------------------
-> Now for the slightly grueling part. You'll set up an Eclipse project from scratch with the correct settings to build Kilobot programs. Once you’ve finished, you should probably (read: certainly) make a copy of this ‘clean’ project as a boilerplate, so you don’t have to repeat this procedure every time you want to start a new project.
+> Now for the slightly grueling part. You'll set up an Eclipse project from scratch with the correct settings to build Kilobot programs. Once you’ve finished, you should probably (read: certainly) make a copy of this ‘clean’ project as a boilerplate, so you don’t have to repeat this procedure every time you start a new project.
 
 ### Creating the Project
 
@@ -90,9 +90,6 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 6. Closing Notes
 ----------------
+When starting a new project, you might want to rename a copy of your boilerplate project. Apart from renaming the directory, you also need to open each of the files `.cproject` and `.project`, and do a Search and Replace operation from the old (boilerplate) project name to your desired new one.
 
-If you want you can now delete the Kilolib folder from your PC as we have copied the necessary header + library files into the Eclipse project directory.
-
-If you really want to you can also unisntall the Programmer’s Notepad but you cannot uninstall the WInAVR toolchain. This is the toolchain that Eclipse is using under the hood.
-
-Renaming a project.
+Happy coding.
