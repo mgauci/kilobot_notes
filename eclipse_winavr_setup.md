@@ -40,17 +40,17 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
  
 4. Setting Up an Eclipse Project
 --------------------------------
-> Now for the slightly gruelling part. You'll set up an Eclipse project from scratch to compile code for the Kilobot. Once you’ve finished, you probably (read: certainly) want to make a copy of this ‘clean’ project and keep it in a safe place, so you don’t have to repeat this procedure every time you want to start a new project.
+> Now for the slightly gruelling part. You'll set up an Eclipse project from scratch with the correct settings to build Kilobot programs. Once you’ve finished, you should probably (read: certainly) make a copy of this ‘clean’ project, so you don’t have to repeat this procedure every time you want to start a new project.
 
-1. Open Eclipse, and select a workspace (e.g. create a folder on your Desktop for handiness).
+4.1. Open Eclipse and select a workspace (e.g. create a directory on your desktop for handiness).
 
-2. Click File > New > C Project. In the dialog, give your project a name (e.g. Kilobot) and under Project Type, select AVR Cross Target Application > Empty Project. Click Next.
+4.2. Click `File > New > C Project`. In the dialog, give your project a name (here we'll assume it's `Kilobot`) and under `Project Type`, select `AVR Cross Target Application > Empty Project`. Click `Next`.
 
-3. You probably don’t need both Debug and Release configurations. Uncheck Debug and click Next.
+4.3. You probably don’t need both Debug and Release configurations. Uncheck `Debug` and click `Next`.
 
-4. In the next dialog (AVR Target Hardware Properties), select ATmega328P as the MCU Type and set the MCU Frequency to 8000000 Hz (8 MHz). Click Finish.
+4.4. In the next dialog (`AVR Target Hardware Properties`), under `MCU Type` select `ATmega328P`, and set the `MCU Frequency` to `8000000` Hz (8 MHz). Click `Finish`.
 
-5. Create a new main file for your project by right clicking on its name, New > Source File, and give it a name, e.g. main.c. Copy and paste into this file the code from blank.c found in the Kilolib folder. We’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
+4.5. Create a new main file for your project by right clicking on its name, New > Source File, and give it a name, e.g. main.c. Copy and paste into this file the code from blank.c found in the Kilolib folder. We’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
 
 We now need to provide with directories for the include files (.h) and library file (.a) of the Kilolib library. Although these could be anywhere on your machine, I recommend making a copy of them in your Eclipse project directory. They are small enough, and this way, your project is self-contained.
 
