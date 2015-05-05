@@ -43,6 +43,8 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 --------------------------------
 > Now for the slightly gruelling part. You'll set up an Eclipse project from scratch with the correct settings to build Kilobot programs. Once you’ve finished, you should probably (read: certainly) make a copy of this ‘clean’ project, so you don’t have to repeat this procedure every time you want to start a new project.
 
+### Creating the Project
+
 4.1. Open Eclipse and select a workspace (e.g. create a directory on your desktop for handiness).
 
 4.2. Click `File > New > C Project`. In the dialog, give your project a name (here we'll assume it's `Kilobot`) and under `Project Type`, select `AVR Cross Target Application > Empty Project`. Click `Next`.
@@ -52,6 +54,8 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 4.4. In the next dialog (`AVR Target Hardware Properties`), under `MCU Type` select `ATmega328P`, and set the `MCU Frequency` to `8000000` Hz (8 MHz). Click `Finish`.
 
 4.5. Create a new source file in your project by right clicking on the project's name `> New > Source File`. Give this new source file a name, e.g. `main.c`. Copy and paste into this file the code from `blank.c` found in the Kilolib directory. You’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
+
+### Adding Header and Library Files
 
 > You now need to provide Eclipse with paths to the Kilolib header (.h) and library (.a) files. Although you could set these paths to any directory on your machine, I recommend copying them into your Eclipse project directory. They're small enough, and this way your project is self-contained.
 
@@ -75,6 +79,8 @@ This is a relative path, telling the compiler to look for the /include directory
 
 9. Under “Libraries (-l)” add a library and type: “kilolib”. The linker will automatically look for a file called “libkilolib.a”, which is why we renamed this before.
 
+### Fixing a Bug
+
 One last step: If you try compiling now and you use any functions from the math library (math.h), you’ll get an error. This is due to a bug - apparently Eclipse attempts to use the C++ instead of the C library. This is described here: http://forum.arduino.cc/index.php?topic=40215.0
 
 10. The first solution posted there works. It’s copied here for convenience:
@@ -87,13 +93,18 @@ This should convince the linker to get math functions from libc and not libgcc. 
 
 The above workaround works for me.
 
+5. Building Your Code and Uploading it to a Kilobot Robot
+---------------------------------------------------------
+
 11. Close the settings. You’re now good to go. Build the project by pressing Ctrl++B (or going to Project -> Build All). A subdirectory “Release” will be created in your project, and the object file will be found here (“Kilobot.hex” if you named your project “Kilobot”).
 
 12. You can now upload this hex file to your Kilobot robot using the KiloGUI app.
 
-Closing Notes
--------------
+6. Closing Notes
+----------------
 
 If you want you can now delete the Kilolib folder from your PC as we have copied the necessary header + library files into the Eclipse project directory.
 
 If you really want to you can also unisntall the Programmer’s Notepad but you cannot uninstall the WInAVR toolchain. This is the toolchain that Eclipse is using under the hood.
+
+Renaming a project.
