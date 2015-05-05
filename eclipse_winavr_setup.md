@@ -40,7 +40,7 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
  
 4. Setting Up an Eclipse Project
 --------------------------------
-> Now the slightly gruelling part. You'll set up an Eclipse project from scratch to compile code for the Kilobot. Once you’ve finished, you probably (read: certainly) want to make a copy of this ‘clean’ project and keep it in a safe place, so you don’t have to repeat this procedure every time you want to start a new project.
+> Now for the slightly gruelling part. You'll set up an Eclipse project from scratch to compile code for the Kilobot. Once you’ve finished, you probably (read: certainly) want to make a copy of this ‘clean’ project and keep it in a safe place, so you don’t have to repeat this procedure every time you want to start a new project.
 
 1. Open Eclipse, and select a workspace (e.g. create a folder on your Desktop for handiness).
 
