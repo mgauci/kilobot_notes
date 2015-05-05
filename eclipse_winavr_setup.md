@@ -51,11 +51,17 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.4. In the next dialog (`AVR Target Hardware Properties`), under `MCU Type` select `ATmega328P`, and set the `MCU Frequency` to `8000000` Hz (8 MHz). Click `Finish`.
 
-4.5. Create a new source file in your project by right clicking on its name `> New > Source File`, and give it a name, e.g. `main.c`. Copy and paste into this file the code from `blank.c` found in the Kilolib directory. You’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
+4.5. Create a new source file in your project by right clicking on the project's name `> New > Source File`. Give this new source file a name, e.g. `main.c`. Copy and paste into this file the code from `blank.c` found in the Kilolib directory. You’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
 
 > You now need to provide Eclipse with paths to the Kilolib header (.h) and library (.a) files. Although you could set these paths to any directory on your machine, I recommend copying them into your Eclipse project directory. They're small enough, and this way your project is self-contained.
 
-6. In your Eclipse project, create two new directories, include and lib (right click on the Project Name > New > Folder). Copy ALL the .h files from the Kilolib directory into the new “include” directory. Copy the kilolib.a file from /build in the Kilolib directory into the new lib directory. Very importantly, rename the kilolib.a file you just copied into /lib in your Eclipse project directory to libkilolib.a (i.e. prepend it with “lib”). This is because the linker expects all library files to start with lib.
+4.6. In your Eclipse project directory, create two new directories, and call them `include` and `lib`. (to create a new directory, right click on the project name `> New > Folder`). 
+
+4.7. Copy *all* the .h files from the Kilolib directory into the `include` directory. 
+
+4.8. Copy the kilolib.a file from /build in the Kilolib directory into the new `lib` directory. 
+
+4.9. *Very importantly*, rename the kilolib.a file you just copied into the `lib` directory to `libkilolib.a` (i.e. prepend it with "lib"). This is because the linker expects all library files to start with "lib".
 
 We’ll now tell Eclipse where to look for the include and library files.
 
