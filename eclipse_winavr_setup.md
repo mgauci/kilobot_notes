@@ -36,12 +36,11 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 > Next, you need to install the AVR Eclipse plugin. Note that [this does NOT include an AVR toolchain](http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_GCC_Toolchain) (compiler, linker, etc.), which is why you installed WinAVR.
 
-2. Install the AVR Eclipse plugin by following the instructions here: http://avr-eclipse.sourceforge.net/wiki/index.php/Plugin_Download
+3.3. Install the AVR Eclipse plugin by following the instructions [here](http://avr-eclipse.sourceforge.net/wiki/index.php/Plugin_Download).
  
-Setting Up an Eclipse Project
------------------------------
-
-We’ll now set up an Eclipse project from scratch to compile code for the Kilobot. Once you’ve finished, you probably want to make a copy of this ‘clean’ project and keep it in a safe place, so you don’t have to repeat this procedure every time you want to start a new project.
+4. Setting Up an Eclipse Project
+--------------------------------
+> Now the slightly gruelling part. You'll set up an Eclipse project from scratch to compile code for the Kilobot. Once you’ve finished, you probably (read: certainly) want to make a copy of this ‘clean’ project and keep it in a safe place, so you don’t have to repeat this procedure every time you want to start a new project.
 
 1. Open Eclipse, and select a workspace (e.g. create a folder on your Desktop for handiness).
 
