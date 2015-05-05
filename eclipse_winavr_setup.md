@@ -1,4 +1,5 @@
 Using Eclipse and WinAVR to Program Kilobots
+============================================
 Author: Melvin Gauci
 Created: 05 May 2015
 Last modified: 05 May 2015
