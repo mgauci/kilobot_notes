@@ -55,7 +55,7 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.5. Create a new source file in your project by right clicking on the project's name `> New > Source File`. Give this new source file a name, e.g. `main.c`. Copy and paste into this file the code from `blank.c` found in the Kilolib directory. You’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
 
-### Adding Header and Library Files
+### Setting Header and Library File Paths
 
 > You now need to provide Eclipse with paths to the Kilolib header (.h) and library (.a) files. Although you could set these paths to any directory on your machine, I recommend copying them into your Eclipse project directory. They're small enough, and this way your project is self-contained.
 
@@ -67,17 +67,13 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.9. *Very importantly*, rename the kilolib.a file you just copied into the `lib` directory to `libkilolib.a` (i.e. prepend it with "lib"). This is because the linker expects all library files to start with "lib".
 
-We’ll now tell Eclipse where to look for the include and library files.
+> You’ll now tell Eclipse where to look for the header and library files you just copied.
 
-7. Right click on your project, and go to Properties. Go to C/C++ Build -> Settings. Under “Tool Settings” (first tab on the left, should be activated by default) go to “Directories” under AVR Compiler. Under “Include Paths (-I)” add a new path, and paste this:
-"${workspace_loc:/${ProjName}/include}"
-This is a relative path, telling the compiler to look for the /include directory in your project directory, which in turn is in the workspace directory. Alternatively instead of pasting this, you can click the “Workspace” button in the dialog that pops up when you add a new path, and navigate to the /include directory in your project.
+4.10. Right click on the project name and click `Properties`.  Go to `C/C++ Build -> Settings`. Under `Tool Settings` go to `AVR Compiler -> Directories`. Under `Include Paths (-I)` add a new path. Click `Workspace` and navigate to the `include` directory in your project.
 
-8. Now go to “Libraries” under AVR C Linker. Under “Libraries Path (-L)” add a new path and paste: 
-"${workspace_loc:/${ProjName}/lib}"
-(or navigate to /lib by clicking “Workspace” as described above).
+4.11. Go to `AVR C Linker -> Libraries`. Under `Libraries Path (-L)` add a new path. Click `Workspace` and navigate to the `lib` directory in your project.
 
-9. Under “Libraries (-l)” add a library and type: “kilolib”. The linker will automatically look for a file called “libkilolib.a”, which is why we renamed this before.
+4.12. Under `Libraries (-l)` add a library and type: `kilolib`. The linker will automatically look for a file called `libkilolib.a`, which is why we renamed this file.
 
 ### Fixing a Bug
 
