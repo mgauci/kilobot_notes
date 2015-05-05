@@ -16,24 +16,23 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 2. Building Kilolib
 -------------------
 
-2.1. [Download](https://github.com/acornejo/kilolib) Kilolib and extract the folder.
+2.1. [Download](https://github.com/acornejo/kilolib) Kilolib and extract the zipped file.
 
 > You now need to build Kilolib, and it’s easiest to do this using the Programmer’s Notepad IDE. There's no need to create a project; you just need to point the IDE to the Kilolib directory, and it will execute the Makefile that's in there.
 
 2.2. In Programmer’s Notepad, click `File -> Open`, navigate to the Kilolib directory and open the file `blank.c`. 
 
-2.3. Click on `Tools > Make All`.
+2.3. Click `Tools > Make All`.
 
 > If all goes well, you should get: `Process Exit Code: 0`. The built files are now found under `/build` in your Kilolib directory. The static library is the file `kilolib.a`.
 
-3. Installing Eclipse & Plugins
-----------------------------
+3. Installing Eclipse and Plugins
+---------------------------------
+> You need to have Eclipse installed with C/C++ support and with the AVR plugin.
 
-> We now need to set up an Eclipse project to compile with WinAVR and link to the Kilolib library. First, you need to have Eclipse with C/C++ support installed. Eclipse can be downloaded from here: http://eclipse.org/downloads/
+3.1. If you don’t plan to use Eclipse for Java development, you can directly download and install the [Eclipse IDE for C/C++ Developers](http://eclipse.org/downloads/packages/eclipse-ide-cc-developers/lunasr2) version. In this case, skip the next step (3.2.).
 
-1a. If you don’t plan to use Eclipse for Java development, you can directly download the C/C++ version (Eclipse IDE for C/C++ Developers) and you can skip the next step of installing the CDT plugin.
-
-1b. Alternatively, if you already have Eclipse installed, but not the CDT plugin, install it by following the instructions here: http://eclipse.org/cdt/downloads.php
+1b. Alternatively, if you already have Eclipse installed, but not the CDT plugin, install it by following the instructions [here](http://eclipse.org/cdt/downloads.php).
 
 Next, we need to install the AVR Eclipse plugin. Note that this does NOT include an AVR toolchain (compiler, linker, etc.), which is why we installed the WinAVR toolchain before (see here: http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_GCC_Toolchain).
 
