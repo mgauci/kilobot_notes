@@ -24,7 +24,7 @@ You now need to build Kilolib, and it’s easiest to do this using the Programme
 
 3. Click on `Tools > Make All`.
 
-If all goes well, you should get: `Process Exit Code: 0`. The build files are now found under `/build` in your Kilolib directory. The library itself is the file `kilolib.a`.
+If all goes well, you should get: `Process Exit Code: 0`. The built files are now found under `/build` in your Kilolib directory. The static library is the file `kilolib.a`.
 
 Installing Eclipse & Plugins
 ----------------------------
