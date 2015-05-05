@@ -9,9 +9,9 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 1. Installing the WinAVR Toolchain
 -------------------------------
 
-a. [Download](http://winavr.sourceforge.net/) and install WinAVR. During installation, accept the option to install Programmer’s Notepad.
+1.1 [Download](http://winavr.sourceforge.net/) and install WinAVR. During installation, accept the option to install Programmer’s Notepad.
 
-b. If you’re running Windows 8.1 (or Vista, apparently!) you’ll need to replace a DLL in the WinAVR installation directory (a bug that's described [here](http://www.avrfreaks.net/forum/windows-81-compilation-error)). [Download](http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip) and extract this DLL, and copy it to `/utils/bin` under your WinAVR installation directory. When prompted if you want to replace the current DLL, accept.
+1.2 If you’re running Windows 8.1 (or Vista, apparently!) you’ll need to replace a DLL in the WinAVR installation directory (a bug that's described [here](http://www.avrfreaks.net/forum/windows-81-compilation-error)). [Download](http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip) and extract this DLL, and copy it to `/utils/bin` under your WinAVR installation directory. When prompted if you want to replace the current DLL, accept.
 
 Building Kilolib
 -----------------
