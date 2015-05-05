@@ -58,11 +58,11 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 > You now need to provide Eclipse with paths to the Kilolib header (.h) and library (.a) files. Although you could set these paths to any directory on your machine, I recommend copying them into your Eclipse project directory. They're small enough, and this way your project is self-contained.
 
-4.6. In your Eclipse project directory, create two new directories, and call them `include` and `lib`. (to create a new directory, right click on the project name `> New > Folder`). 
+4.6. In your Eclipse project, create two new directories and call them `include` and `lib` (to create a new directory, right click on the project name `> New > Folder`). 
 
-4.7. Copy *all* the .h files from the Kilolib directory into the `include` directory. 
+4.7. Copy *all* the .h files from the Kilolib directory into the `include` directory in your project. 
 
-4.8. Copy the kilolib.a file from /build in the Kilolib directory into the new `lib` directory. 
+4.8. Copy the `kilolib.a` file from `/build` in the Kilolib directory into the new `lib` directory in your project. 
 
 4.9. *Very importantly*, rename the kilolib.a file you just copied into the `lib` directory to `libkilolib.a` (i.e. prepend it with "lib"). This is because the linker expects all library files to start with "lib".
 
