@@ -28,13 +28,13 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 3. Installing Eclipse and Plugins
 ---------------------------------
-> You need to have Eclipse installed with C/C++ support and with the AVR plugin.
+> First, you need to have Eclipse installed with C/C++ support (the CDT plugin).
 
-3.1. If you don’t plan to use Eclipse for Java development, you can directly download and install the [Eclipse IDE for C/C++ Developers](http://eclipse.org/downloads/packages/eclipse-ide-cc-developers/lunasr2) version. In this case, skip the next step (3.2.).
+3.1. If you don’t plan to use Eclipse for Java development, you can directly download and install the [Eclipse IDE for C/C++ Developers](http://eclipse.org/downloads/packages/eclipse-ide-cc-developers/lunasr2) version. In this case, skip the next step.
 
-1b. Alternatively, if you already have Eclipse installed, but not the CDT plugin, install it by following the instructions [here](http://eclipse.org/cdt/downloads.php).
+3.2. Alternatively, if you already have Eclipse installed, but not the CDT plugin, install it by following the instructions [here](http://eclipse.org/cdt/downloads.php).
 
-Next, we need to install the AVR Eclipse plugin. Note that this does NOT include an AVR toolchain (compiler, linker, etc.), which is why we installed the WinAVR toolchain before (see here: http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_GCC_Toolchain).
+> Next, you need to install the AVR Eclipse plugin. Note that [this does NOT include an AVR toolchain](http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_GCC_Toolchain) (compiler, linker, etc.), which is why you installed WinAVR.
 
 2. Install the AVR Eclipse plugin by following the instructions here: http://avr-eclipse.sourceforge.net/wiki/index.php/Plugin_Download
  
