@@ -1,3 +1,7 @@
+Title:  Using Eclipse and WinAVR to Program Kilobots
+Author: Melvin Gauci
+Date:   May 05, 2015  
+
 Using Eclipse and WinAVR to Program Kilobots
 ============================================
 
