@@ -1,9 +1,7 @@
 Using Eclipse and WinAVR to Program Kilobots
 ============================================
 Author: Melvin Gauci
-
 Created: 05 May 2015
-
 Last modified: 05 May 2015
 
 We’ll set ourselves up to use Eclipse as our IDE, which will build our code using the WinAVR toolchain.
