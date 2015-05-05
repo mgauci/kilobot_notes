@@ -6,23 +6,23 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 **NOTE:** If you're new to the Kilobot platform, it's highly recommended that you use the [online Kilobot editor and compiler](https://www.kilobotics.com/editor), instead of going through the process below. This process is only worth the trouble for people who'll be working with the Kilobot platform extensively and would like to use a more comprehensive IDE.
 
-1. Installing the WinAVR Toolchain
--------------------------------
+1. Installing WinAVR
+--------------------
 
-1.1 [Download](http://winavr.sourceforge.net/) and install WinAVR. During installation, accept the option to install Programmer’s Notepad.
+1.1. [Download](http://winavr.sourceforge.net/) and install WinAVR. During installation, accept the option to install Programmer’s Notepad.
 
-1.2 If you’re running Windows 8.1 (or Vista, apparently!) you’ll need to replace a DLL in the WinAVR installation directory (a bug that's described [here](http://www.avrfreaks.net/forum/windows-81-compilation-error)). [Download](http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip) and extract this DLL, and copy it to `/utils/bin` under your WinAVR installation directory. When prompted if you want to replace the current DLL, accept.
+1.2. If you’re running Windows 8.1 (or Vista, apparently!) you’ll need to replace a DLL in the WinAVR installation directory (a bug that's described [here](http://www.avrfreaks.net/forum/windows-81-compilation-error)). [Download](http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip) and extract this DLL, and copy it to `/utils/bin` under your WinAVR installation directory. When prompted if you want to replace the current DLL, accept.
 
 2. Building Kilolib
------------------
+-------------------
 
-2.1 [Download](https://github.com/acornejo/kilolib) Kilolib and extract the folder.
+2.1. [Download](https://github.com/acornejo/kilolib) Kilolib and extract the folder.
 
 > You now need to build Kilolib, and it’s easiest to do this using the Programmer’s Notepad IDE. There's no need to create a project; you just need to point the IDE to the Kilolib root directory, and it will execute the Makefile that's in there.
 
-2.2 In Programmer’s Notepad, click `File -> Open`, navigate to the Kilolib directory and open the file `blank.c`. 
+2.2. In Programmer’s Notepad, click `File -> Open`, navigate to the Kilolib directory and open the file `blank.c`. 
 
-2.3 Click on `Tools > Make All`.
+2.3. Click on `Tools > Make All`.
 
 > If all goes well, you should get: `Process Exit Code: 0`. The built files are now found under `/build` in your Kilolib directory. The static library is the file `kilolib.a`.
 
