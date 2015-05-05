@@ -20,7 +20,7 @@ Building Kilolib
 
 You now need to build Kilolib, and it’s easiest to do this using the Programmer’s Notepad IDE. There's no need to create a project; you just need to point the IDE to the Kilolib root directory, and it will execute the Makefile that's in there.
 
-2. In Programmer’s Notepad, click `File -> Open`, navigate to the Kilolib directory and open the file “blank.c”. 
+2. In Programmer’s Notepad, click `File -> Open`, navigate to the Kilolib directory and open the file `blank.c`. 
 
 3. Click on `Tools > Make All`.
 
