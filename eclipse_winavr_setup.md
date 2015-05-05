@@ -1,8 +1,5 @@
 Using Eclipse and WinAVR to Program Kilobots
 ============================================
-Author: Melvin Gauci
-Created: 05 May 2015
-Last modified: 05 May 2015
 
 We’ll set ourselves up to use Eclipse as our IDE, which will build our code using the WinAVR toolchain.
 
@@ -32,6 +29,8 @@ We now need to build Kilolib. It’s easiest to do this from Programmer’s Note
 3. If all goes well, you should get: “Process Exit Code: 0”. The build files are now found under /build in your Kilolib directory. The library itself is the file kilolib.a.
 
 Installing Eclipse & Plugins
+----------------------------
+
 We now need to set up an Eclipse project to compile with WinAVR and link to the Kilolib library.
 
 First, you need to have Eclipse with C/C++ support installed. Eclipse can be downloaded from here: http://eclipse.org/downloads/
@@ -43,7 +42,10 @@ First, you need to have Eclipse with C/C++ support installed. Eclipse can be dow
 Next, we need to install the AVR Eclipse plugin. Note that this does NOT include an AVR toolchain (compiler, linker, etc.), which is why we installed the WinAVR toolchain before (see here: http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_GCC_Toolchain).
 
 2. Install the AVR Eclipse plugin by following the instructions here: http://avr-eclipse.sourceforge.net/wiki/index.php/Plugin_Download
+ 
 Setting Up an Eclipse Project
+-----------------------------
+
 We’ll now set up an Eclipse project from scratch to compile code for the Kilobot. Once you’ve finished, you probably want to make a copy of this ‘clean’ project and keep it in a safe place, so you don’t have to repeat this procedure every time you want to start a new project.
 
 1. Open Eclipse, and select a workspace (e.g. create a folder on your Desktop for handiness).
@@ -87,7 +89,10 @@ The above workaround works for me.
 11. Close the settings. You’re now good to go. Build the project by pressing Ctrl++B (or going to Project -> Build All). A subdirectory “Release” will be created in your project, and the object file will be found here (“Kilobot.hex” if you named your project “Kilobot”).
 
 12. You can now upload this hex file to your Kilobot robot using the KiloGUI app.
+
 Closing Notes
+-------------
+
 If you want you can now delete the Kilolib folder from your PC as we have copied the necessary header + library files into the Eclipse project directory.
 
 If you really want to you can also unisntall the Programmer’s Notepad but you cannot uninstall the WInAVR toolchain. This is the toolchain that Eclipse is using under the hood.
