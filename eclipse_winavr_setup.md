@@ -6,14 +6,14 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 **NOTE:** If you're new to the Kilobot platform, it's highly recommended that you use the [online Kilobot editor and compiler](https://www.kilobotics.com/editor), instead of going through the process below. This process is only worth the trouble for people who'll be working with the Kilobot platform extensively and would like to use a more comprehensive IDE.
 
-1 Installing the WinAVR Toolchain
+1. Installing the WinAVR Toolchain
 -------------------------------
 
 1.1 [Download](http://winavr.sourceforge.net/) and install WinAVR. During installation, accept the option to install Programmer’s Notepad.
 
 1.2 If you’re running Windows 8.1 (or Vista, apparently!) you’ll need to replace a DLL in the WinAVR installation directory (a bug that's described [here](http://www.avrfreaks.net/forum/windows-81-compilation-error)). [Download](http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip) and extract this DLL, and copy it to `/utils/bin` under your WinAVR installation directory. When prompted if you want to replace the current DLL, accept.
 
-2 Building Kilolib
+2. Building Kilolib
 -----------------
 
 2.1 [Download](https://github.com/acornejo/kilolib) Kilolib and extract the folder.
@@ -24,14 +24,12 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 2.3 Click on `Tools > Make All`.
 
-If all goes well, you should get: `Process Exit Code: 0`. The built files are now found under `/build` in your Kilolib directory. The static library is the file `kilolib.a`.
+> If all goes well, you should get: `Process Exit Code: 0`. The built files are now found under `/build` in your Kilolib directory. The static library is the file `kilolib.a`.
 
-Installing Eclipse & Plugins
+3. Installing Eclipse & Plugins
 ----------------------------
 
-We now need to set up an Eclipse project to compile with WinAVR and link to the Kilolib library.
-
-First, you need to have Eclipse with C/C++ support installed. Eclipse can be downloaded from here: http://eclipse.org/downloads/
+> We now need to set up an Eclipse project to compile with WinAVR and link to the Kilolib library. First, you need to have Eclipse with C/C++ support installed. Eclipse can be downloaded from here: http://eclipse.org/downloads/
 
 1a. If you don’t plan to use Eclipse for Java development, you can directly download the C/C++ version (Eclipse IDE for C/C++ Developers) and you can skip the next step of installing the CDT plugin.
 
