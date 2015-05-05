@@ -51,9 +51,9 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.4. In the next dialog (`AVR Target Hardware Properties`), under `MCU Type` select `ATmega328P`, and set the `MCU Frequency` to `8000000` Hz (8 MHz). Click `Finish`.
 
-4.5. Create a new main file for your project by right clicking on its name, New > Source File, and give it a name, e.g. main.c. Copy and paste into this file the code from blank.c found in the Kilolib folder. We’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
+4.5. Create a new source file in your project by right clicking on its name `> New > Source File`, and give it a name, e.g. `main.c`. Copy and paste into this file the code from `blank.c` found in the Kilolib directory. You’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
 
-We now need to provide with directories for the include files (.h) and library file (.a) of the Kilolib library. Although these could be anywhere on your machine, I recommend making a copy of them in your Eclipse project directory. They are small enough, and this way, your project is self-contained.
+> You now need to provide Eclipse with paths to the Kilolib header (.h) and library (.a) files. Although you could set these paths to any directory on your machine, I recommend copying them into your Eclipse project directory. They're small enough, and this way your project is self-contained.
 
 6. In your Eclipse project, create two new directories, include and lib (right click on the Project Name > New > Folder). Copy ALL the .h files from the Kilolib directory into the new “include” directory. Copy the kilolib.a file from /build in the Kilolib directory into the new lib directory. Very importantly, rename the kilolib.a file you just copied into /lib in your Eclipse project directory to libkilolib.a (i.e. prepend it with “lib”). This is because the linker expects all library files to start with lib.
 
