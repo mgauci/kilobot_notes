@@ -2,7 +2,7 @@ Using Eclipse and WinAVR to Program Kilobots
 ============================================
 *Author: Melvin Gauci; melvin.gauci@gmail.com*
 
-This document describes how to set up the Eclipse IDE to program Kilobots using the WinAVR toolchain on Windows.
+This document describes how to set up the Eclipse IDE and the WinAVR toolchain to program Kilobots on Windows.
 
 **NOTE:** If you're new to the Kilobot platform, you're advised to **[use the online Kilobot editor](https://www.kilobotics.com/editor)**, instead of going through the process below. This process is only worth the trouble for people who'll be working with the Kilobot platform extensively and would like to use a more comprehensive IDE.
 
