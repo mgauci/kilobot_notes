@@ -6,14 +6,14 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 **NOTE:** If you're new to the Kilobot platform, you're advised to **[use the online Kilobot editor](https://www.kilobotics.com/editor)**, instead of going through the process below. This process is only worth the trouble for people who'll be working with the Kilobot platform extensively and would like to use a more comprehensive IDE.
 
-1. Installing WinAVR
+1. Install WinAVR
 --------------------
 
 1.1. [Download](http://winavr.sourceforge.net/) and install WinAVR. During installation, accept the option to install Programmer’s Notepad.
 
 1.2. If you’re running certain versions of Windows (certainly 8.1, and apparently Vista) you’ll need to replace a DLL in the WinAVR installation directory (a bug that's described [here](http://www.avrfreaks.net/forum/windows-81-compilation-error)). [Download](http://www.madwizard.org/download/electronics/msys-1.0-vista64.zip) and extract this DLL, and copy it to `/utils/bin` under your WinAVR installation directory. When prompted if you want to replace the current DLL, accept.
 
-2. Building Kilolib
+2. Build Kilolib
 -------------------
 
 2.1. [Download](https://github.com/acornejo/kilolib) Kilolib and extract the zipped file.
@@ -26,7 +26,7 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 > If all goes well, you should get: `Process Exit Code: 0`. The built files are now found under `/build` in your Kilolib directory. The static library is the file `kilolib.a`.
 
-3. Installing Eclipse and Plugins
+3. Install Eclipse and Plugins
 ---------------------------------
 > First, you need to have Eclipse installed with C/C++ support (the CDT plugin).
 
@@ -38,11 +38,11 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 3.3. Install the AVR Eclipse plugin by following the instructions [here](http://avr-eclipse.sourceforge.net/wiki/index.php/Plugin_Download).
  
-4. Setting Up an Eclipse Project
+4. Set Up an Eclipse Project
 --------------------------------
 > Now for the slightly grueling part. You'll set up an Eclipse project from scratch with the correct settings to build Kilobot programs. Once you’ve finished, you should probably (read: certainly) make a copy of this ‘clean’ project as a boilerplate, so you don’t have to repeat this procedure every time you start a new project.
 
-### Creating the Project
+### Create the Project
 
 4.1. Open Eclipse and select a workspace (e.g. create a directory on your desktop for handiness).
 
@@ -54,7 +54,7 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.5. Create a new source file in your project by right clicking on the project's name `> New > Source File`. Give this new source file a name, e.g. `main.c`. Copy and paste into this file the code from `blank.c` found in the Kilolib directory. You’ll use this code to make sure everything is working (later, you’ll write your own programs in this file).
 
-### Setting Header and Library File Paths
+### Set the Header and Library File Paths
 
 > You now need to provide Eclipse with paths to the Kilolib header (.h) and library (.a) files. Although you could set these paths to any directory on your machine, I recommend copying them into your Eclipse project directory. They're small enough, and this way your project is self-contained.
 
@@ -74,15 +74,15 @@ This document describes how to set up the Eclipse IDE to program Kilobots using 
 
 4.12. Under `Libraries (-l)` add a library and type: `kilolib`. The linker will automatically look for a file called `libkilolib.a`, which is why we renamed this file.
 
-### Fixing a Silly Bug
+### Fix a Silly Bug
 
 > One last step. If you try building now and your coded uses any functions from the math library (math.h), you’ll get an error. This is due to a [bug](http://forum.arduino.cc/index.php?topic=40215.0) - apparently Eclipse attempts to use the C++ library instead of the C one, and this causes a problem.
 
 4.13. Go to `AVR C Linker` (this is one level above where you already are). Modify the `Command Line Pattern` to:
 `${COMMAND}  -lc -lm ${FLAGS} ${OUTPUT_FLAG}${OUTPUT_PREFIX}${OUTPUT}  ${INPUTS}  -lc`.
 
-5. Building Your Code and Uploading it to a Kilobot Robot
----------------------------------------------------------
+5. Build Your Code and Upload it to a Kilobot
+---------------------------------------------
 
 5.1. Close the settings - you’re now good to go. Build the project by pressing `Ctrl+B` (or going to `Project -> Build All`). A `Release` directory will be created in your project, and this will contain the object code file (aka "hex file"), `Kilobot.hex`.
 
